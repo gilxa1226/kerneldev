@@ -3,10 +3,10 @@
 # The only one that needs changing is the assembler 
 # rule, as we use nasm instead of GNU as.
 
-SOURCES=boot.o
+SOURCES=boot.o main.o
 
-CFLAGS=
-LDFLAGS=-Tlink.ld
+CFLAGS=-nostdlib -nostdinc -fno-builtin -fno-stack-protector
+LDFLAGS=-Tlinker.ld
 ASFLAGS=-felf
 
 all: $(SOURCES) link 
