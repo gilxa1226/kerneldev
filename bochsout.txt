@@ -33,7 +33,7 @@
 00000000000i[     ]   SB16 support: yes
 00000000000i[     ]   USB support: no
 00000000000i[     ]   VGA extension support: vbe cirrus
-00000000000i[MEM0 ] allocated memory at 0xb4dc4008. after alignment, vector=0xb4dc5000
+00000000000i[MEM0 ] allocated memory at 0xb4e07008. after alignment, vector=0xb4e08000
 00000000000i[MEM0 ] 32.00MB
 00000000000i[MEM0 ] rom at 0xfffe0000/131072 ('/usr/share/bochs/BIOS-bochs-latest')
 00000000000i[MEM0 ] rom at 0xc0000/32768 ('/usr/share/bochs/VGABIOS-elpin-2.40')
@@ -79,7 +79,7 @@
 00000000000i[     ] lt_dlhandle is 0x81ff190
 00000000000i[PLGIN] loaded plugin libbx_parallel.la
 00000000000i[CMOS ] Using local time for initial clock
-00000000000i[CMOS ] Setting initial clock to: Mon May  5 11:36:07 2014 (time0=1399304167)
+00000000000i[CMOS ] Setting initial clock to: Mon May  5 13:06:48 2014 (time0=1399309608)
 00000000000i[DMA  ] channel 4 used by cascade
 00000000000i[DMA  ] channel 2 used by Floppy Drive
 00000000000e[FDD  ] cannot determine media geometry, trying to use defaults
@@ -149,49 +149,49 @@
 00004414466i[BIOS ] Shutdown flag 0
 00004415147i[BIOS ] ram_size=0x02000000
 00004415625i[BIOS ] ram_end=32MB
-00010316181i[BIOS ] Found 1 cpu(s)
-00010335300i[BIOS ] bios_table_addr: 0x000fba88 end=0x000fcc00
-00010335408i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
-00010663105i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
-00010991033i[P2I  ] PCI IRQ routing: PIRQA# set to 0x0b
-00010991054i[P2I  ] PCI IRQ routing: PIRQB# set to 0x09
-00010991075i[P2I  ] PCI IRQ routing: PIRQC# set to 0x0b
-00010991096i[P2I  ] PCI IRQ routing: PIRQD# set to 0x09
-00010991106i[P2I  ] write: ELCR2 = 0x0a
-00010991991i[BIOS ] PIIX3/PIIX4 init: elcr=00 0a
-00010999907i[BIOS ] PCI: bus=0 devfn=0x00: vendor_id=0x8086 device_id=0x1237 class=0x0600
-00011002483i[BIOS ] PCI: bus=0 devfn=0x08: vendor_id=0x8086 device_id=0x7000 class=0x0601
-00011004898i[BIOS ] PCI: bus=0 devfn=0x09: vendor_id=0x8086 device_id=0x7010 class=0x0101
-00011005138i[PIDE ] new BM-DMA address: 0xc000
-00011005842i[BIOS ] region 4: 0x0000c000
-00011015173i[BIOS ] MP table addr=0x000fbb60 MPC table addr=0x000fba90 size=0xd0
-00011017115i[BIOS ] SMBIOS table addr=0x000fbb70
-00011017154i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
-00011017998i[BIOS ] bios_table_cur_addr: 0x000fbc7a
-00074826807i[BIOS ] Booting from 0000:7c00
-00077575178i[BIOS ] int13_harddisk: function 41, unmapped device for ELDL=80
-00077579955i[BIOS ] int13_harddisk: function 08, unmapped device for ELDL=80
-00077584608i[BIOS ] *** int 15h function AX=00c0, BX=0000 not yet supported!
-00103846000p[XGUI ] >>PANIC<< POWER button turned off.
-00103846000i[CPU0 ] CPU is in protected mode (active)
-00103846000i[CPU0 ] CS.d_b = 32 bit
-00103846000i[CPU0 ] SS.d_b = 32 bit
-00103846000i[CPU0 ] | EAX=00000000  EBX=0002d000  ECX=000b8000  EDX=0000000d
-00103846000i[CPU0 ] | ESP=00067ec8  EBP=00067ee0  ESI=00053c8e  EDI=00053c8f
-00103846000i[CPU0 ] | IOPL=0 id vip vif ac vm rf nt of df if tf sf ZF af PF cf
-00103846000i[CPU0 ] | SEG selector     base    limit G D
-00103846000i[CPU0 ] | SEG sltr(index|ti|rpl)     base    limit G D
-00103846000i[CPU0 ] |  CS:0008( 0001| 0|  0) 00000000 ffffffff 1 1
-00103846000i[CPU0 ] |  DS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00103846000i[CPU0 ] |  SS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00103846000i[CPU0 ] |  ES:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00103846000i[CPU0 ] |  FS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00103846000i[CPU0 ] |  GS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-00103846000i[CPU0 ] | EIP=00100027 (00100027)
-00103846000i[CPU0 ] | CR0=0x60000011 CR2=0x00000000
-00103846000i[CPU0 ] | CR3=0x00000000 CR4=0x00000000
-00103846000i[CPU0 ] 0x00100027>> jmp .+0xfffffffe (0x00100027) : EBFE
-00103846000i[CMOS ] Last time is 1399304270 (Mon May  5 11:37:50 2014)
-00103846000i[XGUI ] Exit
-00103846000i[     ] restoring default signal behavior
-00103846000i[CTRL ] quit_sim called with exit code 1
+00011650677i[BIOS ] Found 1 cpu(s)
+00011669796i[BIOS ] bios_table_addr: 0x000fba88 end=0x000fcc00
+00011669904i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+00011997601i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+00012325529i[P2I  ] PCI IRQ routing: PIRQA# set to 0x0b
+00012325550i[P2I  ] PCI IRQ routing: PIRQB# set to 0x09
+00012325571i[P2I  ] PCI IRQ routing: PIRQC# set to 0x0b
+00012325592i[P2I  ] PCI IRQ routing: PIRQD# set to 0x09
+00012325602i[P2I  ] write: ELCR2 = 0x0a
+00012326487i[BIOS ] PIIX3/PIIX4 init: elcr=00 0a
+00012334403i[BIOS ] PCI: bus=0 devfn=0x00: vendor_id=0x8086 device_id=0x1237 class=0x0600
+00012336979i[BIOS ] PCI: bus=0 devfn=0x08: vendor_id=0x8086 device_id=0x7000 class=0x0601
+00012339394i[BIOS ] PCI: bus=0 devfn=0x09: vendor_id=0x8086 device_id=0x7010 class=0x0101
+00012339634i[PIDE ] new BM-DMA address: 0xc000
+00012340338i[BIOS ] region 4: 0x0000c000
+00012349669i[BIOS ] MP table addr=0x000fbb60 MPC table addr=0x000fba90 size=0xd0
+00012351611i[BIOS ] SMBIOS table addr=0x000fbb70
+00012351650i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+00012352494i[BIOS ] bios_table_cur_addr: 0x000fbc7a
+00077484265i[BIOS ] Booting from 0000:7c00
+00080232636i[BIOS ] int13_harddisk: function 41, unmapped device for ELDL=80
+00080237413i[BIOS ] int13_harddisk: function 08, unmapped device for ELDL=80
+00080242066i[BIOS ] *** int 15h function AX=00c0, BX=0000 not yet supported!
+05165300000p[XGUI ] >>PANIC<< POWER button turned off.
+05165300000i[CPU0 ] CPU is in protected mode (active)
+05165300000i[CPU0 ] CS.d_b = 32 bit
+05165300000i[CPU0 ] SS.d_b = 32 bit
+05165300000i[CPU0 ] | EAX=00000000  EBX=0002d000  ECX=000b8000  EDX=00000003
+05165300000i[CPU0 ] | ESP=00067ec8  EBP=00067ee0  ESI=00053c8e  EDI=00053c8f
+05165300000i[CPU0 ] | IOPL=0 id vip vif ac vm rf nt of df if tf sf ZF af PF cf
+05165300000i[CPU0 ] | SEG selector     base    limit G D
+05165300000i[CPU0 ] | SEG sltr(index|ti|rpl)     base    limit G D
+05165300000i[CPU0 ] |  CS:0008( 0001| 0|  0) 00000000 ffffffff 1 1
+05165300000i[CPU0 ] |  DS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+05165300000i[CPU0 ] |  SS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+05165300000i[CPU0 ] |  ES:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+05165300000i[CPU0 ] |  FS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+05165300000i[CPU0 ] |  GS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+05165300000i[CPU0 ] | EIP=00100027 (00100027)
+05165300000i[CPU0 ] | CR0=0x60000011 CR2=0x00000000
+05165300000i[CPU0 ] | CR3=0x00000000 CR4=0x00000000
+05165300000i[CPU0 ] 0x00100027>> jmp .+0xfffffffe (0x00100027) : EBFE
+05165300000i[CMOS ] Last time is 1399314773 (Mon May  5 14:32:53 2014)
+05165300000i[XGUI ] Exit
+05165300000i[     ] restoring default signal behavior
+05165300000i[CTRL ] quit_sim called with exit code 1

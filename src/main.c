@@ -12,6 +12,10 @@ int main(struct multiboot *mboot_ptr)
 	monitor_clear();
 	// Write out a sample string.
 	monitor_write("Hello, world!");
+	monitor_write("\n");
+	monitor_write_hex(16);
+	monitor_write("\n");
+	monitor_write_dec(235);
 	
 
 	return 0;
