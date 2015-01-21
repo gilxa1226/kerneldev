@@ -1,3 +1,6 @@
-This is a repository to store the source code for my walk through of JamesM's kernel development tutorial.
+This repository holds the code for a custom 'toy' OS I am working on by utilizing various tutorials.
 
-You can find the tutorial at the following link if you are interested: http://www.jamesmolloy.co.uk/tutorial_html/index.html
+* http://wiki.osdev.org/Bare_Bones
+* http://www.jamesmolloy.co.uk/tutorial_html/index.html
+* http://wiki.osdev.org/James_Molloy%27s_Tutorial_Known_Bugs#Before_you_follow_the_tutorial
+
