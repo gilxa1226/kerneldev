@@ -1,0 +1,61 @@
+make: Entering directory '/home/haller/kerneldev/libc'
+mkdir -p /home/haller/kerneldev/sysroot/usr/include
+cp -RTv include /home/haller/kerneldev/sysroot/usr/include
+'include/string.h' -> '/home/haller/kerneldev/sysroot/usr/include/string.h'
+'include/stdio.h' -> '/home/haller/kerneldev/sysroot/usr/include/stdio.h'
+'include/stdlib.h' -> '/home/haller/kerneldev/sysroot/usr/include/stdlib.h'
+'include/sys' -> '/home/haller/kerneldev/sysroot/usr/include/sys'
+'include/sys/cdefs.h' -> '/home/haller/kerneldev/sysroot/usr/include/sys/cdefs.h'
+make: Leaving directory '/home/haller/kerneldev/libc'
+make: Entering directory '/home/haller/kerneldev/kernel'
+mkdir -p /home/haller/kerneldev/sysroot/usr/include
+cp -RTv include /home/haller/kerneldev/sysroot/usr/include
+'include/kernel' -> '/home/haller/kerneldev/sysroot/usr/include/kernel'
+'include/kernel/vga.h' -> '/home/haller/kerneldev/sysroot/usr/include/kernel/vga.h'
+'include/kernel/tty.h' -> '/home/haller/kerneldev/sysroot/usr/include/kernel/tty.h'
+make: Leaving directory '/home/haller/kerneldev/kernel'
+make: Entering directory '/home/haller/kerneldev/libc'
+mkdir -p /home/haller/kerneldev/sysroot/usr/include
+cp -RTv include /home/haller/kerneldev/sysroot/usr/include
+'include/string.h' -> '/home/haller/kerneldev/sysroot/usr/include/string.h'
+'include/stdio.h' -> '/home/haller/kerneldev/sysroot/usr/include/stdio.h'
+'include/stdlib.h' -> '/home/haller/kerneldev/sysroot/usr/include/stdlib.h'
+'include/sys/cdefs.h' -> '/home/haller/kerneldev/sysroot/usr/include/sys/cdefs.h'
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c stdio/printf.c -o stdio/printf.o -std=gnu11 -O2 -g -Wall -Wextra   -D__is_myos_libc -Iinclude
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c stdio/putchar.c -o stdio/putchar.o -std=gnu11 -O2 -g -Wall -Wextra   -D__is_myos_libc -Iinclude
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c stdio/puts.c -o stdio/puts.o -std=gnu11 -O2 -g -Wall -Wextra   -D__is_myos_libc -Iinclude
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c stdlib/abort.c -o stdlib/abort.o -std=gnu11 -O2 -g -Wall -Wextra   -D__is_myos_libc -Iinclude
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c string/memcmp.c -o string/memcmp.o -std=gnu11 -O2 -g -Wall -Wextra   -D__is_myos_libc -Iinclude
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c string/memcpy.c -o string/memcpy.o -std=gnu11 -O2 -g -Wall -Wextra   -D__is_myos_libc -Iinclude
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c string/memmove.c -o string/memmove.o -std=gnu11 -O2 -g -Wall -Wextra   -D__is_myos_libc -Iinclude
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c string/memset.c -o string/memset.o -std=gnu11 -O2 -g -Wall -Wextra   -D__is_myos_libc -Iinclude
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c string/strlen.c -o string/strlen.o -std=gnu11 -O2 -g -Wall -Wextra   -D__is_myos_libc -Iinclude
+i686-elf-ar rcs libc.a  stdio/printf.o stdio/putchar.o stdio/puts.o stdlib/abort.o string/memcmp.o string/memcpy.o string/memmove.o string/memset.o string/strlen.o    
+i686-elf-ar rcs libg.a
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c stdio/printf.c -o stdio/printf.libk.o -std=gnu11 -O2 -g -Wall -Wextra -ffreestanding -fbuiltin   -D__is_myos_libc -Iinclude -D__is_myos_kernel
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c stdio/putchar.c -o stdio/putchar.libk.o -std=gnu11 -O2 -g -Wall -Wextra -ffreestanding -fbuiltin   -D__is_myos_libc -Iinclude -D__is_myos_kernel
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c stdio/puts.c -o stdio/puts.libk.o -std=gnu11 -O2 -g -Wall -Wextra -ffreestanding -fbuiltin   -D__is_myos_libc -Iinclude -D__is_myos_kernel
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c stdlib/abort.c -o stdlib/abort.libk.o -std=gnu11 -O2 -g -Wall -Wextra -ffreestanding -fbuiltin   -D__is_myos_libc -Iinclude -D__is_myos_kernel
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c string/memcmp.c -o string/memcmp.libk.o -std=gnu11 -O2 -g -Wall -Wextra -ffreestanding -fbuiltin   -D__is_myos_libc -Iinclude -D__is_myos_kernel
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c string/memcpy.c -o string/memcpy.libk.o -std=gnu11 -O2 -g -Wall -Wextra -ffreestanding -fbuiltin   -D__is_myos_libc -Iinclude -D__is_myos_kernel
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c string/memmove.c -o string/memmove.libk.o -std=gnu11 -O2 -g -Wall -Wextra -ffreestanding -fbuiltin   -D__is_myos_libc -Iinclude -D__is_myos_kernel
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c string/memset.c -o string/memset.libk.o -std=gnu11 -O2 -g -Wall -Wextra -ffreestanding -fbuiltin   -D__is_myos_libc -Iinclude -D__is_myos_kernel
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c string/strlen.c -o string/strlen.libk.o -std=gnu11 -O2 -g -Wall -Wextra -ffreestanding -fbuiltin   -D__is_myos_libc -Iinclude -D__is_myos_kernel
+i686-elf-ar rcs libk.a stdio/printf.libk.o stdio/putchar.libk.o stdio/puts.libk.o stdlib/abort.libk.o string/memcmp.libk.o string/memcpy.libk.o string/memmove.libk.o string/memset.libk.o string/strlen.libk.o
+mkdir -p /home/haller/kerneldev/sysroot/usr/lib
+cp libc.a libg.a libk.a /home/haller/kerneldev/sysroot/usr/lib
+make: Leaving directory '/home/haller/kerneldev/libc'
+make: Entering directory '/home/haller/kerneldev/kernel'
+mkdir -p /home/haller/kerneldev/sysroot/usr/include
+cp -RTv include /home/haller/kerneldev/sysroot/usr/include
+'include/kernel/vga.h' -> '/home/haller/kerneldev/sysroot/usr/include/kernel/vga.h'
+'include/kernel/tty.h' -> '/home/haller/kerneldev/sysroot/usr/include/kernel/tty.h'
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c arch/i386/crti.S -o arch/i386/crti.o -O2 -g -ffreestanding -fbuiltin -Wall -Wextra   -D__is_myos_kernel -Iinclude
+nasm -felf arch/i386/boot.s
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c arch/i386/tty.c -o arch/i386/tty.o -std=gnu11 -O2 -g -ffreestanding -fbuiltin -Wall -Wextra   -D__is_myos_kernel -Iinclude
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c kernel/kernel.c -o kernel/kernel.o -std=gnu11 -O2 -g -ffreestanding -fbuiltin -Wall -Wextra   -D__is_myos_kernel -Iinclude
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -c arch/i386/crtn.S -o arch/i386/crtn.o -O2 -g -ffreestanding -fbuiltin -Wall -Wextra   -D__is_myos_kernel -Iinclude
+i686-elf-gcc --sysroot=/home/haller/kerneldev/sysroot -isystem=/usr/include -T arch/i386/linker.ld -o myos.kernel -O2 -g -ffreestanding -fbuiltin -Wall -Wextra  arch/i386/crti.o /usr/lib/gcc/i686-elf/4.8.4/crtbegin.o arch/i386/boot.o arch/i386/tty.o  kernel/kernel.o  /usr/lib/gcc/i686-elf/4.8.4/crtend.o arch/i386/crtn.o     -nostdlib -lk -lgcc 
+mkdir -p /home/haller/kerneldev/sysroot/boot
+cp myos.kernel /home/haller/kerneldev/sysroot/boot
+make: Leaving directory '/home/haller/kerneldev/kernel'
